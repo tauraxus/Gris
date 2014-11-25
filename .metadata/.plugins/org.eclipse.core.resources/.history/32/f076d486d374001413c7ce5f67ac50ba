@@ -1,0 +1,45 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Uppgift7_2 extends JPanel {
+	JFrame frame;
+	
+	public Uppgift7_2(){
+		frame = new JFrame();
+		frame.add(this);
+		
+		frame.setSize(400, 400);
+		frame.setVisible(true);
+		frame.setTitle("Världens snyggaste gris");
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+	}
+	
+	public void paintComponent(Graphics g){
+		g.setColor(Color.PINK); //Rosa områden först!
+		g.fillRect(127, 156, 18, 20); //Öra 1.
+		g.fillRect(153, 156, 12, 17); //Öra 2.
+		g.fillOval(110, 172, 73, 60); //Huvud.
+		g.fillOval(177, 182, 110, 87); //Kropp.
+		g.fillRect(200, 264, 16, 43); //Ben 1
+		g.fillRect(232, 269, 14, 40); //Ben 2
+		
+		g.setColor(Color.black); //Sen svart.
+		g.fillOval(123,183, 14, 13); //Öga 1
+		g.fillOval(149, 188, 14, 11); //öga 2
+		g.drawOval(131, 204, 23, 19); //Tryne, del 1.
+		g.drawLine(139, 210, 139, 218); //Tryne, del 2.
+		g.drawLine(147, 210, 147, 219); //Tryne, del 3.
+		
+		g.drawLine(280, 244, 299, 247); //Svans 1
+		g.drawLine(299, 247, 305, 231); //Svans 2
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new Uppgift7_2();
+	}
+
+}

@@ -1,0 +1,32 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Uppgift7_2 extends JPanel {
+	JFrame frame;
+	
+	public Uppgift7_2(){
+		frame = new JFrame();
+		frame.add(this);
+		
+		frame.setSize(400, 400);
+		frame.setVisible(true);
+		frame.setTitle("Världens snyggaste gris");
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+	}
+	
+	public void paintComponent(Graphics g){
+		g.setColor(Color.PINK); //Rosa områden först!
+		g.fillRect(127, 156, 18, 20); //Öra 1.
+		g.fillRect(153, 156, 12, 17); //Öra 2.
+		g.fillOval(149, 202, 73, 60);
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new Uppgift7_2();
+	}
+
+}
